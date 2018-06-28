@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/index.css">
+        <title>ComicBookDB</title>
+    </head>
+    <body>
+
+        <section data-role="page" id="pgWelcome">
+            <header data-role="header" data-position="fixed">
+                <h1>CBDb</h1>
+            </header>
+            <article role="main" class="ui-content">
+                <h2>Welcome</h2>
+                <div>
+                    <h3>Returning User: </h3>
+                    <a href="#pgLogIn" data-role="button" data-transition="flip">Log In</a>
+                    <h3>New User: </h3>
+                    <a href="#pgSignUp" data-role="button" data-transition="slideup">Sign Up</a>
+                </div>
+            </article>
+        </section>
+
+        <section data-role="page" id="pgSignUp">
+            <header data-role="header" data-position="fixed" data-add-back-btn="true">
+                <h1>CBDb</h1>
+            </header>
+            <article role="main" class="ui-content">
+                <h2>Sign Up</h2>
+                <div>
+                    <form id="formSignUp">
+                        <label for="inEmailSignUp">Email: </label><input type="email" required placeholder="peter@parker.biz" name="inEmailSignUp" id="inEmailSignUp" />
+                        <label for="inPasswordSignUp">Password: </label><input type="password" required name="inPasswordSignUp" id="inPasswordSignUp" />
+                        <label for="inPasswordConfirmSignUp">Confirm Password: </label><input type="password" required name="inPasswordConfirmSignUp" id="inPasswordConfirmSignUp" />
+                        <input type="submit" value="Go" id="btnSignUp">
+                    </form>
+                </div>
+                <div data-role="popup" data-dialog="true" data-dismissible="false" id="popSignUpSuccess">
+                    <header data-role="header"><h1>Success</h1></header>
+                    <article role="main" class="ui-content">Thanks. Ready to go.<br /><a href="#pgLogIn" data-role="button" data-transition="flip">Log In</a></article>
+                </div>
+                <div data-role="popup" class="ui-content" id="popSignUpMismatch">Passwords don't match!</div>
+                <div data-role="popup" class="ui-content" id="popSignUpExists">Account already exists!</div>
+            </article>
+        </section>
+
+        <section data-role="page" id="pgLogIn">
+            <header data-role="header" data-position="fixed" data-add-back-btn="true">
+                <h1>CBDb</h1>
+            </header>
+            <article role="main" class="ui-content">
+                <h2>Log In</h2>
+                <div>
+                    <form id="formLogIn">
+                        <label for="inEmailLogIn">Email: </label><input type="email" required placeholder="bruce@wayne.tech" name="inEmailLogIn" id="inEmailLogIn" />
+                        <label for="inPasswordLogIn">Password: </label><input type="password" required name="inPasswordLogIn" id="inPasswordLogIn" />
+                        <input type="submit" value="Go" id="btnLogIn" />
+                    </form>
+                </div>
+
+                <div data-role="popup" class="ui-content" id="popLoginNonexistant">Account doesn't exist!</div>
+                <div data-role="popup" class="ui-content" id="popLoginIncorrect">Wrong password!</div>
+            </article>
+        </section>
+
+        <section data-role="page" id="pgHome">
+            <header data-role="header" data-position="fixed">
+                <h1>CBDb</h1>
+                <a href="#pgAbout" data-transition="pop" class="ui-btn ui-btn-right ui-btn-icon-right ui-btn-icon-notext ui-corner-all ui-icon-info">Options</a>
+            </header>
+            <article role="main" class="ui-content">
+                <h2>Home</h2>
+            </article>
+            <footer data-role="footer" data-position="fixed">
+                <h4 class="userEmail">footer</h4>
+            </footer>
+        </section>
+
+        <section data-role="page" data-dialog="true" id="pgAbout">
+            <header data-role="header" data-position="fixed">
+                <h1>About</h1>
+            </header>
+            <article role="main" class="ui-content">
+                <h2>CBDb</h2>
+                <p>The Comic Book Database helps you keep track of your collection. Save your favorite series, including title, issue number, bar code, picture, notes, and more.</p>
+                <p>Logged in as <span class="userEmail"></span></p>
+                <p><a href="#" data-role="button" data-inline="true" id="btnLogOut">Log Out</a></p>
+                <h3>Credits</h3>
+                <p>Emoji icons supplied by EmojiOne</p>
+                <p>CBDb Version 1.20170606</p>
+            </article>
+        </section>
+
+        <script src="scripts/jquery-1.8.0.min.js"></script>
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>

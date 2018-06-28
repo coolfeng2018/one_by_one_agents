@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <!-- jQuery Include -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    
+    <script src="js/mobiscroll.core.js"></script>
+    <script src="js/mobiscroll.frame.js"></script>
+    <script src="js/mobiscroll.scroller.js"></script>
+
+    <script src="js/mobiscroll.util.datetime.js"></script>
+    <script src="js/mobiscroll.datetimebase.js"></script>
+    <script src="js/mobiscroll.datetime.js"></script>
+    <script src="js/mobiscroll.select.js"></script>
+    <script src="js/mobiscroll.listbase.js"></script>
+    <script src="js/mobiscroll.image.js"></script>
+    <script src="js/mobiscroll.treelist.js"></script>
+
+    <script src="js/mobiscroll.frame.android.js"></script>
+    <script src="js/mobiscroll.frame.android-holo.js"></script>
+    <script src="js/mobiscroll.frame.ios-classic.js"></script>
+    <script src="js/mobiscroll.frame.ios.js"></script>
+    <script src="js/mobiscroll.frame.jqm.js"></script>
+    <script src="js/mobiscroll.frame.sense-ui.js"></script>
+    <script src="js/mobiscroll.frame.wp.js"></script>
+
+    <script src="js/mobiscroll.android-holo-light.js"></script>
+    <script src="js/mobiscroll.wp-light.js"></script>
+    <script src="js/mobiscroll.mobiscroll-dark.js"></script>
+
+    <script src="js/i18n/mobiscroll.i18n.cs.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.de.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.en-UK.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.es.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.fa.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.fr.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.hu.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.it.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ja.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.nl.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.no.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.pl.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.pt-BR.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.pt-PT.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ro.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ru.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ru-UA.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.sk.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.sv.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.tr.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.zh.js"></script>
+
+    <link href="css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.icons.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.android.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.android-holo.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.ios-classic.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.ios.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.sense-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.wp.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.android.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.android-holo.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.ios-classic.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.wp.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.image.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/mobiscroll.android-holo-light.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.wp-light.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.mobiscroll-dark.css" rel="stylesheet" type="text/css" />
+    <title>预警信息</title>
+    <style type="text/css">
+    </style>
+    <script>
+        var opt_data = {
+            preset: 'date', //日期
+            theme: 'jqm', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'clickpick', //日期选择模式
+            dateFormat: 'yy-mm-dd', // 日期格式
+            setText: '确定', //确认按钮名称
+            cancelText: '取消',//取消按钮名籍我
+            dateOrder: 'yymmdd', //面板中日期排列格式
+            // dayText: '日', monthText: '月', yearText: '年', //面板中年月日文字
+            yearText: '年', monthText: '月',  dayText: '日',  //面板中年月日文字
+            endYear:2020, //结束年份
+            showNow:true,
+            nowText:'今天',
+            hourText:'小时',
+            minuteText:'分'
+        };
+    /*    var opt_datatime = {
+            preset: 'datetime', //日期
+            theme: 'jqm', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'clickpick', //日期选择模式
+            dateFormat: 'yy-mm-dd', // 日期格式
+            setText: '确定', //确认按钮名称
+            cancelText: '取消',//取消按钮名籍我
+            dateOrder: 'yymmdd', //面板中日期排列格式
+            yearText: '年', monthText: '月',  dayText: '日',  //面板中年月日文字
+            endYear:2020 ,//结束年份
+            nowText:'今天',
+            hourText:'小时',
+            minuteText:'分'
+        };*/
+        $(document).ready(function()
+        {
+            $("#mydate1").mobiscroll(opt_data);
+            $("#mydate2").mobiscroll(opt_data);
+           // $("#datatime1").mobiscroll(opt_datatime);
+            $("#filter1").click(function()
+            {
+                alert($("#mydate2").val());
+            });
+        })
+    </script>
+</head>
+<body>
+<div data-role="page"   >
+    <div data-role="header" data-position="fixed" data-theme="b">
+       <a href="main.html" data-role="button" data-icon="back">返回</a>
+        <h1>农田预警信息</h1>
+    </div>
+    <div data-role="content">
+
+       <fieldset ><legend style="color: #006600">选择时间段</legend><hr>
+       <input name="mydate" id="mydate1" type="text" data-role="datebox"   data-inline="true"  placeholder="开始时间" autofocus>
+       <input name="mydate2" id="mydate2" type="text" data-role="datebox"   data-inline="true"  placeholder="结束时间" autofocus>
+       </fieldset>
+        <a href="#" data-role="button" id="filter1">查询</a>
+      
+        <ul  data-role="listview" data-inset="true"  data-count-theme="d">
+            <li><a href="alter-detail-rain.html" data-transition="slidedown"  data-ajax='false' > 雨量预警 <span class="ui-li-count"  > 2 </span></a></li>
+            <li><a href="mian.html" data-transition="slidedown"  data-ajax='false' > 河道水位预警 <span class="ui-li-count" > 2 </span></a> </li>
+            <li><a href="chuancai.html"    data-transition="flip" > 水库水位预警 <span class="ui-li-count" > 5 </span></a> </li>
+            <li><a href="xiangcai.html" data-transition="slidedown"  data-ajax='false' > 全部预警 <span class="ui-li-count" >9</span></a> </li>
+        </ul>
+ 
+    </div>
+    <div align="center" data-role="footer" data-position="fixed"  data-theme="c" >
+        <div data-role="navbar"  data-iconpos="top">
+            <ul>
+                <li><a href="main.html" data-icon="home"   >首页</a></li>
+                <li><a href="NongTianInfo.html" data-icon="info">农田环境</a></li>
+                <li><a href="alter.html"    data-icon="search" >预警查询</a></li>
+                <li><a href="#" data-icon="send-msg">信息上报</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
